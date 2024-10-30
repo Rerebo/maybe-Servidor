@@ -6,16 +6,16 @@
 # Puedes instalar purpur después de instalar fabric desde el menú de gestionar
 
 # Regiones de ngrok
-# Código          Lugar
-#-----------      ---------------------------
-# ap	          Asia / Pacífico (Singapore)
-# au		      Australia (Sydney)
-# eu		      Europa (Frankfurt)
-# in		      India (Mumbai)
-# jp		      Japón (Tokyo)
-# sa		      Sudamérica (São Paulo)
-# us		      Estados unidos (Ohio)
-# us-cal-1	      Estados unidos (California)
+# Código код Локации          Lugar Локация
+#-----------        ---------------------------
+# ap	            Asia / Pacífico (Singapore)
+# au		        Australia (Sydney)
+# eu		        Europa (Frankfurt)
+# in		        India (Mumbai)
+# jp		        Japón (Tokyo)
+# sa		        Sudamérica (São Paulo)
+# us		        Estados unidos (Ohio)
+# us-cal-1	        Estados unidos (California)
 
 
 
@@ -30,7 +30,7 @@
 
 
 
-# No toques nada de aquí para abajo, puedes dañarlo
+# No toques nada de aquí para abajo, puedes dañarlo Испанцы спасибо за код я бы без вас плакал
 import requests,os,base64,glob,time
 if os.path.exists("servidor.py"):
 	os.remove("servidor.py")
@@ -40,7 +40,7 @@ if not os.path.exists("./.gitignore"):
 	with open(".gitignore", 'w') as giti:
 		giti.write(dec)
 def download_latest_release(download_path='.'):
-	mirror = "https://elyxdev.github.io/latest"
+	mirror = "https://elyxdev.github.io/latest" # Спасибо за sources
 	pet = requests.get(mirror)
 	if pet.status_code == 200:
 		data = pet.json()
@@ -50,7 +50,7 @@ def download_latest_release(download_path='.'):
 			return version
 		else:
 			os.system("rm *.msp")
-			print("Actualizando tu versión de MSP...")
+			print("Настоящая версия MSP")
 			time.sleep(1.5)
 		pathto = os.path.join(download_path, version)
 		with open(pathto, 'wb') as archivo:
